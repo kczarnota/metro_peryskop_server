@@ -21,10 +21,6 @@ bootRun {
     args = []
 }
 
-task gulpConstantDev(type: GulpTask) {
-    args = ["ngconstant:dev", "--no-notification"]
-}
-
 war {
     webAppDirName = 'src/main/webapp/'
 }
@@ -45,4 +41,4 @@ processResources {
     }
 }
 
-processResources.dependsOn gulpConstantDev
+processResources
