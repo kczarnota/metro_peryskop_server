@@ -80,17 +80,6 @@ jhipster:
         #max-age: 1800
     mail:
         from: printing_service@localhost
-    swagger:
-        default-include-pattern: /api/.*
-        title: printing_service API
-        description: printing_service API documentation
-        version: 0.0.1
-        terms-of-service-url:
-        contact-name:
-        contact-url:
-        contact-email:
-        license:
-        license-url:
     ribbon:
         display-on-active-profiles: dev
 
