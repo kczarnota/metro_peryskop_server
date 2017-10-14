@@ -67,5 +67,13 @@
 			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
 			<where>qr_code_id = 6 and type = 'IMAGE'</where>
 		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
+			<where>qr_code_id = 7 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
+			<where>qr_code_id = 8 and type = 'IMAGE'</where>
+		</update>
 	</changeSet>
 </databaseChangeLog>

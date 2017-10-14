@@ -28,7 +28,7 @@ public class QrCodeService {
 
 	@Transactional(readOnly = true)
 	public Map<Long, Boolean> getActiveExits(long stationId) {
-		return qrCodeRepository.findByStationId(stationId).stream()
+		return qrCodeRepository.findAllByStationId(stationId).stream()
 				.collect(Collectors.toMap(QrCode::getPointId, QrCode::isOpen));
 	}
 }

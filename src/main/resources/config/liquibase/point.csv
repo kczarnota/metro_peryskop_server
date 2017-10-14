@@ -11,3 +11,7 @@ id;qr_code_id;type;text
 10;5;TEXT;Piate wyjscie
 11;6;IMAGE;
 12;6;TEXT;Szoste wyjscie
+13;7;IMAGE;
+14;7;TEXT;Siodme wyjscie
+15;8;IMAGE;
+16;8;TEXT;Osme wyjscie

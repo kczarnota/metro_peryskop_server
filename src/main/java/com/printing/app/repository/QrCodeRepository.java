@@ -11,5 +11,5 @@ public interface QrCodeRepository extends JpaRepository<QrCode, Long> {
 
 	Optional<QrCode> findOneByStationIdAndPointId(long stationId, long pointId);
 
-	Set<QrCode> findByStationId(long stationId);
+	Set<QrCode> findAllByStationId(long stationId);
 }
