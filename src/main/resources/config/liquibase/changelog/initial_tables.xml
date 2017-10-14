@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+	<changeSet id="qr_code" author="wiktor">
+		<createTable tableName="qr_code">
+			<column name="id" type="bigint" autoIncrement="${autoIncrement}">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="station_id" type="bigint"/>
+			<column name="point_id" type="bigint"/>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="point_data" author="wiktor">
+		<createTable tableName="point_data">
+			<column name="id" type="bigint" autoIncrement="${autoIncrement}">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="qr_code_id" type="bigint"/>
+			<column name="type" type="varchar2(20)"/>
+			<column name="point_id" type="bigint"/>
+			<column name="image" type="BLOB" />
+			<column name="text"  type="CLOB" />
+		</createTable>
+	</changeSet>
+	<changeSet id="point_data_fk" author="wiktor">
+		<addForeignKeyConstraint baseColumnNames="qr_code_id"
+								 baseTableName="point_data"
+								 constraintName="fk_point_data"
+								 referencedColumnNames="id"
+								 referencedTableName="qr_code"/>
+	</changeSet>
+</databaseChangeLog>
