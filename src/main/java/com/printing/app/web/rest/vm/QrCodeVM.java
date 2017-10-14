@@ -1,25 +1,43 @@
 package com.printing.app.web.rest.vm;
 
 import com.google.common.base.MoreObjects;
-import java.util.HashSet;
-import java.util.Set;
 
 public class QrCodeVM {
 
-	private Set<PointDataVM> pointData = new HashSet<>();
+	private String image = null;
+	private String text = null;
+	private String url = null;
 
-	public Set<PointDataVM> getPointData() {
-		return pointData;
+	public String getImage() {
+		return image;
 	}
 
-	public void setPointData(Set<PointDataVM> pointData) {
-		this.pointData = pointData;
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
-				.add("pointData", pointData)
+				.add("image", image)
+				.add("text", text)
+				.add("url", url)
 				.toString();
 	}
 }

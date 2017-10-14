@@ -9,23 +9,23 @@
 
 	<changeSet id="qr_code" author="wiktor">
 		<createTable tableName="qr_code">
-			<column name="id" type="bigint" autoIncrement="${autoIncrement}">
+			<column name="id" type="number" autoIncrement="${autoIncrement}">
 				<constraints primaryKey="true" nullable="false"/>
 			</column>
-			<column name="station_id" type="bigint"/>
-			<column name="point_id" type="bigint"/>
+			<column name="station_id" type="number"/>
+			<column name="point_id" type="number"/>
+			<column name="open" type="boolean"/>
 		</createTable>
 	</changeSet>
 
 	<changeSet id="point_data" author="wiktor">
 		<createTable tableName="point_data">
-			<column name="id" type="bigint" autoIncrement="${autoIncrement}">
+			<column name="id" type="number" autoIncrement="${autoIncrement}">
 				<constraints primaryKey="true" nullable="false"/>
 			</column>
-			<column name="qr_code_id" type="bigint"/>
+			<column name="qr_code_id" type="number"/>
 			<column name="type" type="varchar2(20)"/>
-			<column name="point_id" type="bigint"/>
-			<column name="image" type="BLOB" />
+			<column name="image" type="bytea" />
 			<column name="text"  type="CLOB" />
 		</createTable>
 	</changeSet>
@@ -35,5 +35,37 @@
 								 constraintName="fk_point_data"
 								 referencedColumnNames="id"
 								 referencedTableName="qr_code"/>
+	</changeSet>
+	<changeSet id="inserts" author="wiktor">
+		<loadData file="config/liquibase/station.csv"
+				  separator=";"
+				  tableName="qr_code"/>
+		<loadData file="config/liquibase/point.csv"
+				  separator=";"
+				  tableName="point_data"/>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/1jpeg.jpg"/>
+			<where>qr_code_id = 1 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/2jpeg.jpg"/>
+			<where>qr_code_id = 2 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/3jpeg.jpg"/>
+			<where>qr_code_id = 3 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/4jpeg.jpg"/>
+			<where>qr_code_id = 4 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/5jpeg.jpg"/>
+			<where>qr_code_id = 5 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
+			<where>qr_code_id = 6 and type = 'IMAGE'</where>
+		</update>
 	</changeSet>
 </databaseChangeLog>

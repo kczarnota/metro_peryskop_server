@@ -31,6 +31,9 @@ public class QrCode {
 	@Column(name = "point_id")
 	private long pointId;
 
+	@Column(name = "open")
+	private boolean open;
+
 	@Fetch(FetchMode.JOIN)
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "qrCode", fetch = FetchType.EAGER)
 	private Set<PointData> pointData = new HashSet<>();
@@ -68,12 +71,21 @@ public class QrCode {
 		this.pointData = pointData;
 	}
 
+	public boolean isOpen() {
+		return open;
+	}
+
+	public void setOpen(boolean open) {
+		this.open = open;
+	}
+
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
 				.add("id", id)
 				.add("stationId", stationId)
 				.add("pointId", pointId)
+				.add("open", open)
 				.add("pointData", pointData)
 				.toString();
 	}

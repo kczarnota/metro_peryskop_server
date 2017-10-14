@@ -31,7 +31,7 @@ public class PointData {
 	private byte[] image;
 
 	@Column(name = "type")
-	private Type type;
+	private String type;
 
 	public Long getId() {
 		return id;
@@ -65,11 +65,11 @@ public class PointData {
 		this.image = image;
 	}
 
-	public Type getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(Type type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 

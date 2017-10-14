@@ -1,11 +1,10 @@
 package com.printing.app.web.rest.vm;
 
 import com.google.common.base.MoreObjects;
-import com.printing.app.domain.Type;
 
 public class PointDataVM {
 	private String data;
-	private Type type;
+	private String type;
 
 	public String getData() {
 		return data;
@@ -15,11 +14,11 @@ public class PointDataVM {
 		this.data = data;
 	}
 
-	public Type getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(Type type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
