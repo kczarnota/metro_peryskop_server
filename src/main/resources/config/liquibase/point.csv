@@ -1,20 +1,20 @@
 id;qr_code_id;type;text
 1;1;IMAGE;
-2;1;TEXT;Pierwsze wyjscie
+2;1;TEXT;Pierwsze wyjście
 3;2;IMAGE;
-4;2;TEXT;Drugie wyjscie
+4;2;TEXT;Drugie wyjście
 5;3;IMAGE;
-6;3;TEXT;Trzecie wyjscie
+6;3;TEXT;Trzecie wyjście
 7;4;IMAGE;
-8;4;TEXT;Czwarte wyjscie
+8;4;TEXT;Czwarte wyjście
 9;5;IMAGE;
-10;5;TEXT;Piate wyjscie
+10;5;TEXT;Piąte wyjście
 11;6;IMAGE;
-12;6;TEXT;Szoste wyjscie
+12;6;TEXT;Szóste wyjście
 13;7;IMAGE;
-14;7;TEXT;Siodme wyjscie
+14;7;TEXT;Siódme wyjście
 15;8;IMAGE;
-16;8;TEXT;Osme wyjscie
+16;8;TEXT;Ósme wyjście
 17;1;URL;https://www.google.pl/maps/@52.2541361,21.034981,3a,75y,151.86h,84.19t/data=!3m8!1e1!3m6!1sAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH%3Dw203-h100-k-no-pi-0-ya85.29467-ro-0-fo100!7i13312!8i6656
 18;2;URL;https://www.google.pl/maps/@52.2543869,21.0355511,3a,75y,221.29h,88.69t/data=!3m11!1e1!3m9!1sAF1QipNgOrsMrDA1qX_HH56-Lxnj15aRsAqNtRTK6Ggh!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNgOrsMrDA1qX_HH56-Lxnj15aRsAqNtRTK6Ggh%3Dw203-h100-k-no-pi-0-ya114.314835-ro-0-fo100!7i7500!8i3750!9m2!1b1!2i37
 19;3;URL;https://www.google.pl/maps/@52.255208,21.036484,3a,75y,75.03h,90t/data=!3m11!1e1!3m9!1sAF1QipPj4dsihiyJ8c5d7fEPc39tPz-OCilRlWDAonVY!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPj4dsihiyJ8c5d7fEPc39tPz-OCilRlWDAonVY%3Dw203-h100-k-no-pi-0-ya29.161121-ro-0-fo100!7i13312!8i6656!9m2!1b1!2i37
@@ -23,14 +23,14 @@ id;qr_code_id;type;text
 22;6;URL;https://www.google.pl/maps/@52.2541361,21.034981,3a,75y,151.86h,84.19t/data=!3m8!1e1!3m6!1sAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH%3Dw203-h100-k-no-pi-0-ya85.29467-ro-0-fo100!7i13312!8i6656
 23;7;URL;https://www.google.pl/maps/@52.2541361,21.034981,3a,75y,151.86h,84.19t/data=!3m8!1e1!3m6!1sAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH%3Dw203-h100-k-no-pi-0-ya85.29467-ro-0-fo100!7i13312!8i6656
 24;8;URL;https://www.google.pl/maps/@52.2541361,21.034981,3a,75y,151.86h,84.19t/data=!3m8!1e1!3m6!1sAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOMGUoqQlaEoz0LrY9yJ5aERbxP-TD8nqzoc_lH%3Dw203-h100-k-no-pi-0-ya85.29467-ro-0-fo100!7i13312!8i6656
-25;1;ADDRESS;Warszawa, aleja Solidarnosci 10
-26;2;ADDRESS;Warszawa, aleja Solidarnosci 10
-27;3;ADDRESS;Warszawa, aleja Solidarnosci 10
-28;4;ADDRESS;Warszawa, aleja Solidarnosci 10
-29;5;ADDRESS;Warszawa, aleja Solidarnosci 10
-30;6;ADDRESS;Warszawa, aleja Solidarnosci 10
-31;7;ADDRESS;Warszawa, aleja Solidarnosci 10
-32;8;ADDRESS;Warszawa, aleja Solidarnosci 10
+25;1;ADDRESS;Warszawa, aleja Solidarności 10
+26;2;ADDRESS;Warszawa, aleja Solidarności 10
+27;3;ADDRESS;Warszawa, aleja Solidarności 10
+28;4;ADDRESS;Warszawa, aleja Solidarności 10
+29;5;ADDRESS;Warszawa, aleja Solidarności 10
+30;6;ADDRESS;Warszawa, aleja Solidarności 10
+31;7;ADDRESS;Warszawa, aleja Solidarności 10
+32;8;ADDRESS;Warszawa, aleja Solidarności 10
 33;1;AD;
 34;2;AD;
 35;3;AD;
