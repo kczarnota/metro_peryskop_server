@@ -45,7 +45,7 @@
 				  separator=";"
 				  tableName="point_data"/>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/rac.jpg"/>
+			<column name="image" valueBlobFile="imielin/wil3.jpg"/>
 			<where>qr_code_id = 1 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
@@ -57,7 +57,7 @@
 			<where>qr_code_id = 3 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/wil3.jpg"/>
+			<column name="image" valueBlobFile="imielin/rac.jpg"/>
 			<where>qr_code_id = 4 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
@@ -75,6 +75,38 @@
 		<update tableName="point_data">
 			<column name="image" valueBlobFile="imielin/3jpeg.jpg"/>
 			<where>qr_code_id = 8 and type = 'IMAGE'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 1 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 2 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 3 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 4 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 5 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 6 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 7 and type = 'AD'</where>
+		</update>
+		<update tableName="point_data">
+			<column name="image" valueBlobFile="reklama.png"/>
+			<where>qr_code_id = 8 and type = 'AD'</where>
 		</update>
 	</changeSet>
 </databaseChangeLog>

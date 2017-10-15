@@ -1,6 +1,7 @@
 package com.printing.app.web.rest.vm;
 
 import com.google.common.base.MoreObjects;
+import java.util.List;
 
 public class QrCodeVM {
 
@@ -8,6 +9,7 @@ public class QrCodeVM {
 	private String image = null;
 	private String text = null;
 	private String url = null;
+	private List<String> ads;
 
 	public String getImage() {
 		return image;
@@ -39,6 +41,14 @@ public class QrCodeVM {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public List<String> getAds() {
+		return ads;
+	}
+
+	public void setAds(List<String> ads) {
+		this.ads = ads;
 	}
 
 	@Override

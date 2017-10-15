@@ -23,8 +23,9 @@ public class QrCodeMapper {
 		qrCodeVM.setUrl(getData(qrCodeData.getOrDefault(Type.URL, Collections.emptyList()), PointData::getText));
 		qrCodeVM.setImage(getData(qrCodeData.getOrDefault(Type.IMAGE, Collections.emptyList()),
 				p -> Base64.getEncoder().encodeToString(p.getImage())));
-
 		qrCodeVM.setAddress(getData(qrCodeData.getOrDefault(Type.ADDRESS, Collections.emptyList()), PointData::getText));
+		qrCodeVM.setAds(getCollectionData(qrCodeData.getOrDefault(Type.AD, Collections.emptyList()),
+				p -> Base64.getEncoder().encodeToString(p.getImage())));
 		return qrCodeVM;
 	}
 
@@ -39,5 +40,11 @@ public class QrCodeMapper {
 				map(extractor)
 				.findAny()
 				.orElse(null);
+	}
+
+	private static List<String> getCollectionData(List<PointData> data, Function<PointData, String> extractor) {
+		return data.stream().
+				map(extractor)
+				.collect(Collectors.toList());
 	}
 }
