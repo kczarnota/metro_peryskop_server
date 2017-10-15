@@ -25,9 +25,6 @@ public class PointData {
 	@ManyToOne
 	private QrCode qrCode;
 
-	@Column(name = "address")
-	private String address;
-
 	@Lob
 	@Column(name = "text")
 	private String text;
@@ -79,20 +76,11 @@ public class PointData {
 		this.type = type;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
 				.add("id", id)
 				.add("qrCode", qrCode)
-				.add("address", address)
 				.add("text", text)
 				.add("image", image)
 				.add("type", type)
