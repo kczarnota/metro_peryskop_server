@@ -5,6 +5,7 @@ import com.google.common.base.MoreObjects;
 public class PointDataVM {
 	private String data;
 	private String type;
+	private String exitType;
 
 	public String getData() {
 		return data;
@@ -22,11 +23,20 @@ public class PointDataVM {
 		this.type = type;
 	}
 
+	public String getExitType() {
+		return exitType;
+	}
+
+	public void setExitType(String exitType) {
+		this.exitType = exitType;
+	}
+
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
 				.add("data", data)
 				.add("type", type)
+				.add("exitType", exitType)
 				.toString();
 	}
 }

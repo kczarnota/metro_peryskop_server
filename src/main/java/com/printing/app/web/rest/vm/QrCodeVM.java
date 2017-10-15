@@ -4,6 +4,7 @@ import com.google.common.base.MoreObjects;
 
 public class QrCodeVM {
 
+	private String address;
 	private String image = null;
 	private String text = null;
 	private String url = null;
@@ -32,9 +33,18 @@ public class QrCodeVM {
 		this.url = url;
 	}
 
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
+				.add("address", address)
 				.add("image", image)
 				.add("text", text)
 				.add("url", url)

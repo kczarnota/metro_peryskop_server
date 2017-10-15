@@ -3,6 +3,8 @@ package com.printing.app.domain;
 import com.google.common.base.MoreObjects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +25,9 @@ public class PointData {
 	@ManyToOne
 	private QrCode qrCode;
 
+	@Column(name = "address")
+	private String address;
+
 	@Lob
 	@Column(name = "text")
 	private String text;
@@ -30,8 +35,9 @@ public class PointData {
 	@Column(name = "image")
 	private byte[] image;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "type")
-	private String type;
+	private Type type;
 
 	public Long getId() {
 		return id;
@@ -65,12 +71,20 @@ public class PointData {
 		this.image = image;
 	}
 
-	public String getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(Type type) {
 		this.type = type;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	@Override
@@ -78,6 +92,7 @@ public class PointData {
 		return MoreObjects.toStringHelper(this)
 				.add("id", id)
 				.add("qrCode", qrCode)
+				.add("address", address)
 				.add("text", text)
 				.add("image", image)
 				.add("type", type)

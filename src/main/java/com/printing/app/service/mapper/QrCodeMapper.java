@@ -3,6 +3,7 @@ package com.printing.app.service.mapper;
 import com.google.common.base.Preconditions;
 import com.printing.app.domain.PointData;
 import com.printing.app.domain.QrCode;
+import com.printing.app.domain.Type;
 import com.printing.app.web.rest.vm.QrCodeVM;
 import java.util.Base64;
 import java.util.Collections;
@@ -15,14 +16,15 @@ public class QrCodeMapper {
 
 	public static QrCodeVM map(QrCode qrCode) {
 		QrCodeVM qrCodeVM = new QrCodeVM();
-		Map<String, List<PointData>> qrCodeData = qrCode.getPointData().stream()
+		Map<Type, List<PointData>> qrCodeData = qrCode.getPointData().stream()
 				.collect(Collectors.groupingBy(PointData::getType));
 
-		qrCodeVM.setText(getData(qrCodeData.getOrDefault("TEXT", Collections.emptyList()), PointData::getText));
-		qrCodeVM.setUrl(getData(qrCodeData.getOrDefault("URL", Collections.emptyList()), PointData::getText));
-		qrCodeVM.setImage(getData(qrCodeData.getOrDefault("IMAGE", Collections.emptyList()),
+		qrCodeVM.setText(getData(qrCodeData.getOrDefault(Type.TEXT, Collections.emptyList()), PointData::getText));
+		qrCodeVM.setUrl(getData(qrCodeData.getOrDefault(Type.URL, Collections.emptyList()), PointData::getText));
+		qrCodeVM.setImage(getData(qrCodeData.getOrDefault(Type.IMAGE, Collections.emptyList()),
 				p -> Base64.getEncoder().encodeToString(p.getImage())));
 
+		qrCodeVM.setAddress(getData(qrCodeData.getOrDefault(Type.ADDRESS, Collections.emptyList()), PointData::getText));
 		return qrCodeVM;
 	}
 

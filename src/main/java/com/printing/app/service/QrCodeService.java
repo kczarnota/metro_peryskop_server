@@ -3,6 +3,7 @@ package com.printing.app.service;
 import com.printing.app.domain.QrCode;
 import com.printing.app.repository.QrCodeRepository;
 import com.printing.app.service.mapper.QrCodeMapper;
+import com.printing.app.web.rest.vm.ExitDataVM;
 import com.printing.app.web.rest.vm.QrCodeVM;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -27,8 +28,16 @@ public class QrCodeService {
 	}
 
 	@Transactional(readOnly = true)
-	public Map<Long, Boolean> getActiveExits(long stationId) {
+	public Map<Long, ExitDataVM> getExitData(long stationId) {
 		return qrCodeRepository.findAllByStationId(stationId).stream()
-				.collect(Collectors.toMap(QrCode::getPointId, QrCode::isOpen));
+				.collect(Collectors.toMap(QrCode::getPointId, ExitDataVM::fromQrCode));
+	}
+
+	@Transactional
+	public Map<Long, ExitDataVM> changeState(long stationId, long pointId, boolean state) {
+		qrCodeRepository.findOneByStationIdAndPointId(stationId, pointId)
+				.ifPresent(qrCode -> qrCode.setOpen(state));
+
+		return getExitData(stationId);
 	}
 }

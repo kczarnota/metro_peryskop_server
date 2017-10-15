@@ -15,6 +15,7 @@
 			<column name="station_id" type="number"/>
 			<column name="point_id" type="number"/>
 			<column name="open" type="boolean"/>
+			<column name="exit_type" type="varchar2(20)"/>
 		</createTable>
 	</changeSet>
 
@@ -44,35 +45,35 @@
 				  separator=";"
 				  tableName="point_data"/>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/1jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/rac.jpg"/>
 			<where>qr_code_id = 1 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/2jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/wil1.jpg"/>
 			<where>qr_code_id = 2 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/3jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/wil2.jpg"/>
 			<where>qr_code_id = 3 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/4jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/wil3.jpg"/>
 			<where>qr_code_id = 4 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/5jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/wil4.jpg"/>
 			<where>qr_code_id = 5 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/1jpeg.jpg"/>
 			<where>qr_code_id = 6 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/2jpeg.jpg"/>
 			<where>qr_code_id = 7 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/3jpeg.jpg"/>
 			<where>qr_code_id = 8 and type = 'IMAGE'</where>
 		</update>
 	</changeSet>

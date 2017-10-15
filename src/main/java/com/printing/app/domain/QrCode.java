@@ -6,6 +6,8 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,8 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 @Entity
 @Table(name = "qr_code")
@@ -34,10 +34,12 @@ public class QrCode {
 	@Column(name = "open")
 	private boolean open;
 
-	@Fetch(FetchMode.JOIN)
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "qrCode", fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "qrCode", fetch = FetchType.LAZY)
 	private Set<PointData> pointData = new HashSet<>();
 
+	@Enumerated(EnumType.STRING)
+	@Column(name = "exit_type")
+	private ExitType exitType;
 
 	public Long getId() {
 		return id;
@@ -79,6 +81,14 @@ public class QrCode {
 		this.open = open;
 	}
 
+	public ExitType getExitType() {
+		return exitType;
+	}
+
+	public void setExitType(ExitType exitType) {
+		this.exitType = exitType;
+	}
+
 	@Override
 	public String toString() {
 		return MoreObjects.toStringHelper(this)
@@ -87,6 +97,7 @@ public class QrCode {
 				.add("pointId", pointId)
 				.add("open", open)
 				.add("pointData", pointData)
+				.add("exitType", exitType)
 				.toString();
 	}
 }
