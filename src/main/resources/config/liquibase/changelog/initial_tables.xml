@@ -45,27 +45,27 @@
 				  separator=";"
 				  tableName="point_data"/>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/wil3.jpg"/>
+			<column name="image" valueBlobFile="imielin/1jpeg.jpg"/>
 			<where>qr_code_id = 1 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/wil1.jpg"/>
+			<column name="image" valueBlobFile="imielin/2jpeg.jpg"/>
 			<where>qr_code_id = 2 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/wil2.jpg"/>
+			<column name="image" valueBlobFile="imielin/3jpeg.jpg"/>
 			<where>qr_code_id = 3 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/rac.jpg"/>
+			<column name="image" valueBlobFile="imielin/1jpeg.jpg"/>
 			<where>qr_code_id = 4 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/wil4.jpg"/>
+			<column name="image" valueBlobFile="imielin/5jpeg.jpg"/>
 			<where>qr_code_id = 5 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
-			<column name="image" valueBlobFile="imielin/1jpeg.jpg"/>
+			<column name="image" valueBlobFile="imielin/6jpeg.jpg"/>
 			<where>qr_code_id = 6 and type = 'IMAGE'</where>
 		</update>
 		<update tableName="point_data">
